@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+host: https://brokk.ai
+description: >-
+  Probe of the /.well-known/ discovery surface on brokk.ai. The site is a
+  single-page marketing app that 301-redirects unknown paths to the site root,
+  so no well-known discovery documents are published. Absence recorded as valid
+  data.
+documents:
+  - path: /.well-known/security.txt
+    status: 301
+    note: redirects to site root; no security.txt published
+  - path: /.well-known/openid-configuration
+    status: 301
+    note: redirects to site root; not published
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    note: redirects to site root; not published
+  - path: /.well-known/api-catalog
+    status: 301
+    note: redirects to site root; not published
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    note: redirects to site root; not published

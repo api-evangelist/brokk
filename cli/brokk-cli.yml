@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/BrokkAi/brokk-cli
+description: >-
+  Brokk's first-party command-line surface. Two binaries are relevant: `bifrost`
+  — the Tree-sitter-backed multi-language analyzer (installed from crates.io or
+  PyPI, see packages/brokk-packages.yml), which runs as a CLI query tool, an LSP
+  server, or a stdio MCP server; and `brokk-cli` — a Python launcher for the
+  Brokk Java executor, the Agent Client Protocol (ACP), and the Bifrost MCP
+  server. `mjolnir` is a Rust terminal client for ACP servers. Command surface
+  captured from the GitHub org and the Bifrost docs.
+repos:
+  - https://github.com/BrokkAi/brokk-cli
+  - https://github.com/BrokkAi/bifrost
+  - https://github.com/BrokkAi/mjolnir
+docs: https://brokkai.github.io/bifrost/
+install:
+  cargo: cargo install brokk-bifrost --locked
+  pip: pip install brokk-bifrost-searchtools
+  github: pipx install git+https://github.com/BrokkAi/brokk-cli
+binaries:
+  bifrost:
+    description: Multi-language static-analysis engine; runs as CLI, LSP, or stdio MCP server.
+    modes:
+      - {name: cli-query, description: Run structured code queries (JSON CodeQuery or Rune Query Language) directly from the terminal.}
+      - {name: mcp, flag: '--mcp "symbol|extended"', description: Start a stdio MCP server exposing analysis toolsets (see mcp/brokk-mcp.yml).}
+      - {name: lsp, description: Run as a workspace-aware language server for editors.}
+    flags:
+      - {name: --root, description: Set the analyzer root / project path.}
+  brokk-cli:
+    description: Launcher for the Brokk Java executor, ACP, and the Bifrost MCP server.
+  mjolnir:
+    description: Terminal client for Agent Client Protocol (ACP) servers.

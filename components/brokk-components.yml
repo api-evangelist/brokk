@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: https://brokkai.github.io/bifrost/
+description: >-
+  Client-side / editor-embedded surfaces Brokk ships, distinct from the
+  server-side packages in packages/brokk-packages.yml. Bifrost integrates into
+  editors as a workspace-aware language server (LSP) with a VS Code extension,
+  and exposes its analysis to coding agents over MCP (see mcp/brokk-mcp.yml).
+families:
+  editor:
+    description: Editor integrations backed by the bifrost language server.
+    components:
+      - {name: Bifrost VS Code extension, description: Workspace-aware LSP client that surfaces bifrost symbol/reference/usage analysis in VS Code.}
+      - {name: Bifrost LSP server, description: Language Server Protocol server (bifrost --lsp) for any LSP-capable editor.}
+  agent:
+    description: Agent-facing embedded surfaces.
+    components:
+      - {name: Bifrost MCP server, description: Stdio MCP server embedding structured code-analysis tools into coding agents. See mcp/brokk-mcp.yml.}
+      - {name: Agent Client Protocol (ACP), description: ACP servers (anvil) and terminal client (mjolnir) for driving agents against a Brokk workspace.}

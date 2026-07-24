@@ -1,0 +1,65 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/BrokkAi
+description: >-
+  First-party Brokk developer tooling published to public package registries and
+  GitHub. Brokk (Brokk, Inc., "AI for Large Codebases") ships open-source
+  developer tools rather than a hosted REST API. The core structured-analysis
+  engine "bifrost" is published to crates.io (brokk-bifrost) and PyPI
+  (brokk-bifrost-searchtools); the launcher and terminal clients are distributed
+  from the GitHub org. Registry metadata captured at fetch time (crates.io and
+  PyPI JSON APIs).
+packages:
+  - language: rust
+    registry: crates.io
+    name: brokk-bifrost
+    version: 0.8.4
+    url: https://crates.io/crates/brokk-bifrost
+    source: https://github.com/BrokkAi/bifrost
+    install: cargo install brokk-bifrost --locked
+    official: true
+    note: >-
+      Tree-sitter-backed multi-language code analyzer with bundled LSP and MCP
+      search-tool servers. Powers Brokk's `bifrost` binary.
+  - language: python
+    registry: pypi
+    name: brokk-bifrost-searchtools
+    version: 0.8.4
+    url: https://pypi.org/project/brokk-bifrost-searchtools/
+    source: https://github.com/BrokkAi/bifrost
+    install: pip install brokk-bifrost-searchtools
+    official: true
+    note: >-
+      Fast, structured code search and analysis for Python, backed by a native
+      Rust (Tree-sitter) extension.
+  - language: python
+    registry: github
+    name: brokk-cli
+    url: https://github.com/BrokkAi/brokk-cli
+    source: https://github.com/BrokkAi/brokk-cli
+    install: pipx install git+https://github.com/BrokkAi/brokk-cli
+    official: true
+    note: >-
+      Launcher for the Brokk Java executor, ACP, and the Bifrost MCP server.
+      Distributed from GitHub (not published to PyPI).
+  - language: rust
+    registry: github
+    name: mjolnir
+    url: https://github.com/BrokkAi/mjolnir
+    source: https://github.com/BrokkAi/mjolnir
+    official: true
+    note: Terminal client for Agent Client Protocol (ACP) servers.
+  - language: rust
+    registry: github
+    name: anvil
+    url: https://github.com/BrokkAi/anvil
+    source: https://github.com/BrokkAi/anvil
+    official: true
+    note: ACP server using OpenRouter, Codex, and/or Ollama.
+  - language: java
+    registry: github
+    name: brokk
+    url: https://github.com/BrokkAi/brokk
+    source: https://github.com/BrokkAi/brokk
+    official: true
+    note: The core Brokk application — brings code intelligence to AI (GPL-3.0).

@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/BrokkAi/bifrost/releases
+description: >-
+  Brokk publishes release history through GitHub Releases (the bifrost engine has
+  33+ tagged releases; current 0.8.4) and narrative release notes on the company
+  blog (e.g. "What's new in Brokk 0.23"). There is no single dated JSON/HTML
+  changelog page — GitHub Releases per repo plus the blog are the source of
+  truth. Recent highlights captured from the blog index; exact dates live on the
+  linked posts.
+scheme: semver
+sources:
+  bifrost_releases: https://github.com/BrokkAi/bifrost/releases
+  brokk_releases: https://github.com/BrokkAi/brokk/releases
+  blog: https://brokk.ai/blog/
+current_versions:
+  bifrost: 0.8.4
+  brokk: '0.23'
+entries:
+  - component: bifrost
+    version: 0.8.4
+    highlights: Current release of the multi-language analyzer with bundled LSP and MCP search-tool servers.
+    source: https://github.com/BrokkAi/bifrost/releases
+  - component: bifrost
+    highlights: Introduction of Bifrost, Anvil, and Mjolnir — the Rust analysis engine, ACP server, and terminal client.
+    source: https://brokk.ai/blog/
+  - component: brokk
+    version: '0.23'
+    highlights: "What's new in Brokk 0.23 — release notes for the core Brokk application."
+    source: https://brokk.ai/blog/
+  - component: brokk
+    highlights: "Goodbye to Brokk/Java — the shift in Brokk's core stack."
+    source: https://brokk.ai/blog/

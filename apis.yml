@@ -1,7 +1,28 @@
 aid: brokk
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/brokk.png
 name: Brokk
-description: Brokk is a company surfaced as a portfolio company of mayfield and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Brokk (Brokk, Inc.) builds AI tooling for large codebases. Rather than a hosted
+  REST API, Brokk ships open-source developer tools centered on "bifrost" — a
+  Tree-sitter-backed multi-language static-analysis engine that gives coding
+  agents structured code intelligence (symbols, definitions, references, call
+  graphs, usage analysis) across 12 languages. Bifrost runs as a CLI, a
+  workspace-aware language server (LSP), and a stdio MCP server, and is published
+  to crates.io (brokk-bifrost) and PyPI (brokk-bifrost-searchtools). The company,
+  founded by Jonathan Ellis (Apache Cassandra / DataStax) and backed by Mayfield,
+  also ships the core Brokk application, the brokk-cli launcher, and Agent Client
+  Protocol (ACP) tooling (anvil, mjolnir).
 url: https://raw.githubusercontent.com/api-evangelist/brokk/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +32,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- AI
+- Developer Tools
+- Code Analysis
+- Static Analysis
+- MCP
+- Coding Agents
+- LSP
+- Rust
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +50,34 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/brokk-domain-security.yml
 - type: Website
   url: https://brokk.ai
+- type: Documentation
+  url: https://brokkai.github.io/bifrost/
+- type: GitHubOrganization
+  url: https://github.com/BrokkAi
+- type: Blog
+  url: https://brokk.ai/blog/
+- type: Packages
+  url: packages/brokk-packages.yml
+- type: SDKs
+  url: packages/brokk-packages.yml
+- type: MCPServer
+  url: mcp/brokk-mcp.yml
+- type: CLI
+  url: cli/brokk-cli.yml
+- type: Components
+  url: components/brokk-components.yml
+- type: LLMsTxt
+  url: llms/brokk-llms.txt
+- type: WellKnown
+  url: well-known/brokk-well-known.yml
+- type: ChangeLog
+  url: changelog/brokk-changelog.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
