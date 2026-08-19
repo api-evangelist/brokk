@@ -2,15 +2,12 @@ generated: '2026-07-18'
 method: searched
 status: published
 source: https://brokkai.github.io/bifrost/mcp/
-description: >-
-  Brokk ships an official MCP (Model Context Protocol) server as part of
-  "bifrost", its multi-language static-analysis engine. It runs as a local
-  stdio server that exposes structured code-analysis tools to coding agents.
-  Started via `bifrost --root /path/to/project --mcp "symbol|extended"`, with
-  toolsets selected on the command line. The server is bundled in the
-  brokk-bifrost crate (crates.io) and the brokk-bifrost-searchtools PyPI package
-  (see packages/brokk-packages.yml), and is also launched by brokk-cli. Tool
-  list captured verbatim from the Bifrost MCP documentation.
+description: Brokk ships an official MCP (Model Context Protocol) server as part of "bifrost", its multi-language
+  static-analysis engine. It runs as a local stdio server that exposes structured code-analysis tools
+  to coding agents. Started via `bifrost --root /path/to/project --mcp "symbol|extended"`, with toolsets
+  selected on the command line. The server is bundled in the brokk-bifrost crate (crates.io) and the brokk-bifrost-searchtools
+  PyPI package (see packages/brokk-packages.yml), and is also launched by brokk-cli. Tool list captured
+  verbatim from the Bifrost MCP documentation.
 server:
   name: bifrost
   transport: stdio
@@ -20,49 +17,98 @@ server:
   docs: https://brokkai.github.io/bifrost/mcp/
 toolsets:
   symbol:
-    - {name: search_symbols, description: Locate symbols in the codebase.}
-    - {name: get_symbol_sources, description: Retrieve source code for specific symbols.}
-    - {name: get_summaries, description: Obtain summaries of code entities.}
-    - {name: get_type_by_location, description: Determine type information at a code location.}
-    - {name: rename_symbol, description: Refactor symbol names across the project.}
-    - {name: usage_graph, description: Visualize how symbols are used.}
-    - {name: analyze_commit, description: Examine changes in a git commit.}
-    - {name: scan_usages_by_location, description: Find usages at specific line numbers.}
-    - {name: get_definitions_by_location, description: Get definitions at specific locations.}
+  - name: search_symbols
+    description: Locate symbols in the codebase.
+  - name: get_symbol_sources
+    description: Retrieve source code for specific symbols.
+  - name: get_summaries
+    description: Obtain summaries of code entities.
+  - name: get_type_by_location
+    description: Determine type information at a code location.
+  - name: rename_symbol
+    description: Refactor symbol names across the project.
+  - name: usage_graph
+    description: Visualize how symbols are used.
+  - name: analyze_commit
+    description: Examine changes in a git commit.
+  - name: scan_usages_by_location
+    description: Find usages at specific line numbers.
+  - name: get_definitions_by_location
+    description: Get definitions at specific locations.
   extended:
-    - {name: query_code, description: Execute structural queries on code.}
-    - {name: get_symbol_locations, description: Find all occurrences of symbols.}
-    - {name: get_symbol_ancestors, description: Trace inheritance hierarchies.}
-    - {name: find_filenames, description: Search for files by name.}
-    - {name: list_files, description: Enumerate workspace files.}
-    - {name: most_relevant_files, description: Identify key files for a task.}
-    - {name: search_git_commit_messages, description: Query commit history.}
-    - {name: get_git_log, description: Access repository history.}
-    - {name: get_commit_diff, description: View changes between commits.}
-    - {name: jq, description: Process JSON data.}
-    - {name: xml_skim, description: Extract XML structure quickly.}
-    - {name: xml_select, description: Query XML documents.}
+  - name: query_code
+    description: Execute structural queries on code.
+  - name: get_symbol_locations
+    description: Find all occurrences of symbols.
+  - name: get_symbol_ancestors
+    description: Trace inheritance hierarchies.
+  - name: find_filenames
+    description: Search for files by name.
+  - name: list_files
+    description: Enumerate workspace files.
+  - name: most_relevant_files
+    description: Identify key files for a task.
+  - name: search_git_commit_messages
+    description: Query commit history.
+  - name: get_git_log
+    description: Access repository history.
+  - name: get_commit_diff
+    description: View changes between commits.
+  - name: jq
+    description: Process JSON data.
+  - name: xml_skim
+    description: Extract XML structure quickly.
+  - name: xml_select
+    description: Query XML documents.
   workspace:
-    - {name: refresh, description: Rebuild the code index.}
-    - {name: activate_workspace, description: Switch analyzer root mid-session.}
-    - {name: get_active_workspace, description: Report current workspace.}
+  - name: refresh
+    description: Rebuild the code index.
+  - name: activate_workspace
+    description: Switch analyzer root mid-session.
+  - name: get_active_workspace
+    description: Report current workspace.
   text:
-    - {name: get_file_contents, description: Read file content.}
-    - {name: search_file_contents, description: Find text patterns in files.}
-    - {name: find_files_containing, description: Locate files with specific content.}
+  - name: get_file_contents
+    description: Read file content.
+  - name: search_file_contents
+    description: Find text patterns in files.
+  - name: find_files_containing
+    description: Locate files with specific content.
   slopcop:
-    - {name: compute_cyclomatic_complexity, description: Measure code complexity.}
-    - {name: compute_cognitive_complexity, description: Assess cognitive load.}
-    - {name: report_comment_density_for_code_unit, description: Analyze documentation coverage.}
-    - {name: report_exception_handling_smells, description: Detect error handling issues.}
-    - {name: report_comment_density_for_files, description: File-level documentation metrics.}
-    - {name: analyze_git_hotspots, description: Identify frequently-changed areas.}
-    - {name: report_test_assertion_smells, description: Flag problematic test patterns.}
-    - {name: report_structural_clone_smells, description: Find duplicated code.}
-    - {name: report_long_method_and_god_object_smells, description: Detect oversized abstractions.}
-    - {name: report_dead_code_and_unused_abstraction_smells, description: Locate unused code.}
-    - {name: report_secret_like_code, description: Flag potential credential leaks.}
+  - name: compute_cyclomatic_complexity
+    description: Measure code complexity.
+  - name: compute_cognitive_complexity
+    description: Assess cognitive load.
+  - name: report_comment_density_for_code_unit
+    description: Analyze documentation coverage.
+  - name: report_exception_handling_smells
+    description: Detect error handling issues.
+  - name: report_comment_density_for_files
+    description: File-level documentation metrics.
+  - name: analyze_git_hotspots
+    description: Identify frequently-changed areas.
+  - name: report_test_assertion_smells
+    description: Flag problematic test patterns.
+  - name: report_structural_clone_smells
+    description: Find duplicated code.
+  - name: report_long_method_and_god_object_smells
+    description: Detect oversized abstractions.
+  - name: report_dead_code_and_unused_abstraction_smells
+    description: Locate unused code.
+  - name: report_secret_like_code
+    description: Flag potential credential leaks.
   cli:
-    - {name: classify_test_files, description: Categorize test files.}
+  - name: classify_test_files
+    description: Categorize test files.
   nlp:
-    - {name: semantic_search, description: Find code through natural language queries (when NLP is enabled).}
+  - name: semantic_search
+    description: Find code through natural language queries (when NLP is enabled).
+deployment:
+  mode: none
+  endpoint: https://brokkai.github.io/bifrost/mcp/
+  verified: probed
+  probe: dead
+  note: the endpoint this manifest claimed did not answer; recorded as none rather than deleted so the
+    claim stays auditable
+  checked: '2026-08-12'
+  source: catalog MCP census
