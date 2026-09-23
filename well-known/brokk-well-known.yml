@@ -1,12 +1,12 @@
 generated: '2026-07-18'
 method: searched
 host: https://brokk.ai
-description: >-
-  Probe of the /.well-known/ discovery surface on brokk.ai. The site is a
-  single-page marketing app that 301-redirects unknown paths to the site root,
-  so no well-known discovery documents are published. Absence recorded as valid
-  data.
-documents:
+description: Probe of the /.well-known/ discovery surface on brokk.ai. The site is a single-page marketing
+  app that 301-redirects unknown paths to the site root, so no well-known discovery documents are published.
+  Absence recorded as valid data.
+hosts:
+- host: https://brokk.ai
+  documents:
   - path: /.well-known/security.txt
     status: 301
     note: redirects to site root; no security.txt published
@@ -22,3 +22,8 @@ documents:
   - path: /.well-known/ai-plugin.json
     status: 301
     note: redirects to site root; not published
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
